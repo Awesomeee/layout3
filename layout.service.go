@@ -48,6 +48,7 @@ func checkDuplicateLayoutID(ctx *gin.Context) {
 	dbBpmAdmLayout := res
 	var result string
 	result = "" //1: trùng, 0: không trùng
+	fmt.Println("array length " + fmt.Sprint((*dbBpmAdmLayout)[i].ID))
 	for i := 0; i < len(*dbBpmAdmLayout); i++ {
 		fmt.Println("i " + fmt.Sprint(i) + "- dbBpmAdmLayoutIDElement " + fmt.Sprint((*dbBpmAdmLayout)[i].ID))
 		if fmt.Sprint((*dbBpmAdmLayout)[i].ID) == body.AdmID {
